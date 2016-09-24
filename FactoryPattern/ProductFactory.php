@@ -13,5 +13,4 @@ abstract class ProductFactory
 			die('Unknown product');
 		}
 	}
-
 }
