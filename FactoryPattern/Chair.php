@@ -1,5 +1,5 @@
 <?php
-
+namespace FactoryPattern;
 
 class Chair extends Product
 {

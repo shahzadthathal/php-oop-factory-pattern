@@ -2,13 +2,15 @@
 	
 	echo 'Entry Script "index.php"<br>';
 
-	require(__DIR__.'/Autoload.php');
-	
+	require_once("Autoloader.php");
+	$autoloader = new Autoloader();
+
 	$productType = $_GET['type'];
-	$product = ProductFactory::build($productType);
+	$product = FactoryPattern\ProductFactory::build($productType);
+	//$product = new Product('Chair',44,'chair');
 	$product->showProduct();
 
 	echo"<pre>";
 	echo 'Called Class:';
-	print_r($calledClassesArr);
+	print_r($autoloader->calledClassesArr);
 ?>

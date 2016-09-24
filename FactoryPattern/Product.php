@@ -1,5 +1,5 @@
 <?php
-//namespace Shahzad\FactoryPattern;
+namespace FactoryPattern;
 
 class Product {
 	

@@ -1,13 +1,13 @@
 <?php
-
+namespace FactoryPattern;
 
 abstract class ProductFactory
 {
 	public static function build($productType){
-		$productType = ucwords($productType);
-		if(class_exists($productType)){
-			$product = new $productType(lcfirst($productType)); 
-			return $product;
+		$className = ucwords($productType);
+		$product = "FactoryPattern\\$className";
+		if(class_exists($product)){
+				return new $product($productType);
 		}
 		else{
 			die('Unknown product');

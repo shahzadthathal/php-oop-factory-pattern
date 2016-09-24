@@ -1,5 +1,5 @@
 <?php
-
+namespace FactoryPattern;
 
 class Table extends Product
 {
